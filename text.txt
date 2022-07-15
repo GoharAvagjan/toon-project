@@ -1,0 +1,43 @@
+task Manager|| bulder
+1.Gulp         1.WebPack
+
+
+1.instal ենք անում Gulp
+npm install --save-dev gulp
+npm install gulp
+
+
+2.npm i --save-dev gulp
+
+3.install անել gulp-concat -.css file միացնելու համար
+ Install package with NPM and add it to your development dependencies: 
+ npm i --save-dev gulp-concat
+
+4.npm install gulp-clean-css --save-dev
+
+5.install անել galp-sass
+npm install sass gulp-sass --save-dev
+6.install sass
+npm i sass --save-dev
+
+7.install uglify
+npm install --save-dev gulp-uglify-es
+
+8.instal del
+
+9.npm install -g browser-sync (server)
+
+10. gulp-imagemin
+Minify PNG, JPEG, GIF and SVG images with imagemin
+npm install --save-dev gulp-imagemin
+
+11.npm install --save-dev gulp-group-css-media-queries
+
+
+12.Install gulp-babel if you want to get the pre-release of the next version of gulp-babel.
+
+# Babel 7
+$ npm install --save-dev gulp-babel @babel/core @babel/preset-env
+
+13.npm i gulp-sourcemaps
+

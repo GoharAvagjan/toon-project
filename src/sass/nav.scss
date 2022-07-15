@@ -1,0 +1,122 @@
+@import "global_styles";
+.top_nav{
+  background: $grey;
+
+  .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 60px;
+    width: 100%;
+  }
+
+  .top_nav_block{
+      display: flex;
+
+    a{
+      display: block;
+      //text-decoration: none;
+      margin-right: 15px;
+      svg{
+        width: 45px;
+        height: 45px;
+        fill: $primary;
+      }
+      &:last-child{
+        margin-right: 0;
+      }
+    }
+
+    }
+}
+
+
+nav {
+  background: #fff;
+
+  .container{
+    display: flex;
+    justify-content: space-between;
+    min-height: 80px;
+    align-items: center;
+    position: relative;
+    .nav_menu{
+
+      .menuBtn{
+        display: none;
+      }
+      ul{
+        display: flex;
+        justify-content: space-between;
+        li{
+          list-style-type: none;
+          a{
+            display: flex;
+            height: 80px;
+            align-items: center;
+            padding: 8px;
+            color: $black;
+            font-weight: bold;
+            text-transform: uppercase;
+            position: relative;
+            z-index: 5;
+            transition: color 0.3s;
+
+            &::after{
+              content: "";
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 0%;
+              background: $primary;
+              transition: height 1s;
+              z-index: -1;
+            }
+            &:hover{
+              color: #fff;
+              &::after{
+                height: 100%;
+              }
+            }
+          }
+        }
+      }
+
+      @media screen and (max-width: 768px){
+        .menuBtn{
+          display: flex;
+        }
+        ul{
+          flex-flow: column;
+          position:absolute;
+          top:0;
+          width:500px;
+
+          overflow: hidden;
+          left:-5000px;
+          background: $grey;
+          transition: left 0.2s linear;
+          
+          @media screen  and (max-width:500px){
+            width:300px;
+          }
+          @media screen  and (max-width: 420px){
+            width:200px;
+          }
+          li{
+            a{
+              height: 50px;
+              padding: 8px 20px;
+            }
+          }
+
+          &.active_nav{
+            height: 100vh;
+            left:0
+          }
+        }
+      }
+    }
+  }
+}
